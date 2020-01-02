@@ -31,7 +31,7 @@
                     @else
                         <!-- Login -->
                             <div class="login">
-                                <a href="{{route('login')}}"><i class="fa fa-user" aria-hidden="true"></i> <span>Login</span></a>
+                                <a href="{{route('login')}}"><i class="fa fa-key" aria-hidden="true"></i> <span>Login</span></a>
                             </div>
                     @endif
                     <!-- Cart -->

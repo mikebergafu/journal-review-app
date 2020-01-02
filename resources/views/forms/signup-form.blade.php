@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="product_details_tab clearfix">
                 <div class="row" >
-                    <div class="col-8 offset-2" >
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3" >
                         <form action="{{route('register')}}" method="POST">
                             @csrf
                             <div class="row">
@@ -98,16 +98,23 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <button type="submit" class="btn alazea-btn mt-15">Register</button>
-                                </div>
-                                <div class="col-6">
-                                    <a href="{{route('login')}}" class="text-warning">
+
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                        <button type="submit" class="btn alazea-btn mt-15">Register</button>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                        <a href="{{route('login')}}" class="text-info">
                                         <span>
                                             Already has account? Click to Login
                                         </span>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
+
+
+
                             </div>
                         </form>
                     </div>
