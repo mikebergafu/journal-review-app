@@ -11,27 +11,27 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <select class=" form-control" id="title" name="title">
+                                                <select class=" form-control" id="title_id" name="title_id">
                                                     <option selected disabled>Select your title</option>
                                                     @foreach($titles as $tit)
                                                         <option value="{{$tit->id}}">{{$tit->name}}</option>
                                                     @endforeach
                                                 </select>
-                                                @if ($errors->has('title'))
-                                                    <span class="text-danger">{{ $errors->first('title') }}</span>
+                                                @if ($errors->has('title_id'))
+                                                    <span class="text-danger">{{ $errors->first('title_id') }}</span>
                                                 @endif
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <select class=" form-control" id="gender" name="gender">
+                                                <select class=" form-control" id="gender_id" name="gender_id">
                                                     <option selected disabled>Select your Gender/Sex</option>
                                                     @foreach($genders as $gender)
                                                         <option value="{{$gender->id}}">{{$gender->name}}</option>
                                                     @endforeach
                                                 </select>
-                                                @if ($errors->has('gender'))
-                                                    <span class="text-danger">{{ $errors->first('gender') }}</span>
+                                                @if ($errors->has('gender_id'))
+                                                    <span class="text-danger">{{ $errors->first('gender_id') }}</span>
                                                 @endif
                                             </div>
                                         </div>

@@ -26,6 +26,7 @@ Route::group(['namespace' => 'Researcher'], function () {
         Route::group(['middleware' => 'verified'], function () {
             //Waiting for routes
             Route::get('/home', 'HomeController@index')->name('home');
+            Route::get('/profile', 'HomeController@profile')->name('profile');
 
         });
 

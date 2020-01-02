@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\PaymentInit;
 use App\Gender;
+use App\Helpers\HTTPHelpers;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Title;
 use App\User;
+use http\Exception;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -62,8 +67,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'title' => ['required','int'],
-            'gender' => ['required','int'],
+            'title_id' => ['required','int'],
+            'gender_id' => ['required','int'],
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'other_name' => ['nullable','string'],
@@ -71,8 +76,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ],
             $messages =[
-                'title.required' => 'Please select a title',
-                'gender.required' => 'Please select a gender/sex',
+                'title_id.required' => 'Please select a title',
+                'gender_id.required' => 'Please select a gender/sex',
                 'first_name.required' => 'First Name is Required',
                 'last_name.required' => 'Last Name is required',
                 'password.required' => 'Password is required',
@@ -93,14 +98,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'title' => $data['title'],
-            'gender' => $data['gender'],
-            'first_name' => $data['first_name'],
-            'last_name' => $data['last_name'],
-            'other_name' => $data['other_name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        //Rollback on failure
+        DB::beginTransaction();
+        try {
+           $inputs = [
+                'title_id' => $data['title_id'],
+                'gender_id' => $data['gender_id'],
+                'first_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
+                'other_name' => $data['other_name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+            ];
+           $user = User::create($inputs);
+            DB::commit();
+            return $user;
+        } catch ( Exception $ex) {
+            DB::rollback();
+
+            return ($ex->getMessage());
+        }
+
     }
+
 }

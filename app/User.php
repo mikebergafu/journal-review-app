@@ -19,7 +19,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'title','first_name','other_name','last_name','gender', 'email', 'password',
+        'title_id','first_name','other_name','last_name','gender_id', 'email', 'password',
     ];
 
     /**
@@ -39,4 +39,12 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function title(){
+        return $this->hasOne(Title::class, 'id');
+    }
+
+    public function gender(){
+        return $this->hasOne(Gender::class, 'id');
+    }
 }

@@ -18,6 +18,8 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{{asset('alazea/style.css')}}">
 
+    <link rel="stylesheet" href="{{asset('bergy/css/berg-tweaks.css')}}">
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     @yield('styles')
 
