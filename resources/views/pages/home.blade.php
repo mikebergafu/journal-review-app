@@ -1,5 +1,7 @@
 @extends('main.master')
-
+@section('page-title')
+    Home
+@stop
 @section('content')
     <!-- ##### Hero Area Start ##### -->
     @include('grids.banner-slider')

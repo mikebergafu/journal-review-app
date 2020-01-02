@@ -7,4 +7,8 @@
 <script src="{{asset('alazea/js/plugins/plugins.js')}}"></script>
 <!-- Active js -->
 <script src="{{asset('alazea/js/active.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+@include('alerts.alerts')
 @yield('scripts')
