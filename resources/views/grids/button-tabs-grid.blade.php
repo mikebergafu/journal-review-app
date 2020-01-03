@@ -1,15 +1,5 @@
 <section class="alazea-portfolio-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- Section Heading -->
-                <div class="section-heading text-center">
-                    <h2>Welcome</h2>
-                    <p>{{Auth::user()->title->name.' '.Auth::user()->first_name }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="container">
         <div class="row">

@@ -10,5 +10,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 
+<script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+<script src="https://jqueryvalidation.org/files/dist/additional-methods.js"></script>
+
+@include('scripts.modal-form-validation-js')
+
 @include('alerts.alerts')
 @yield('scripts')

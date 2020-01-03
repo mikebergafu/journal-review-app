@@ -20,6 +20,15 @@
 
     <link rel="stylesheet" href="{{asset('bergy/css/berg-tweaks.css')}}">
 
+    <style>
+        .error-label{
+            color: red !important;
+        }
+
+        .error{
+            color: red !important;
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     @yield('styles')
 
