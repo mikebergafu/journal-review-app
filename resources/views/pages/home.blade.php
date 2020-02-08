@@ -1,5 +1,7 @@
 @extends('main.master')
-
+@section('page-title')
+    Home
+@stop
 @section('content')
     <!-- ##### Hero Area Start ##### -->
     @include('grids.banner-slider')
@@ -36,4 +38,16 @@
     <!-- ##### Contact Area Start ##### -->
     @include('grids.contact-form')
     <!-- ##### Contact Area End ##### -->
+
+    <script type="text/javascript">
+        <!--
+        function retrieveScrollPosition() {
+            document.getElementById('scrollBox').scrollTop = document.getElementById('savedScrollPosition').value;
+        }
+
+        function setScrollPosition(userScrollPosition) {
+            document.getElementById('savedScrollPosition').value = userScrollPosition
+        }
+        //-->
+    </script>
 @stop

@@ -37,4 +37,11 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+        $title = 'Login';
+        $small_banner_background = 'alazea/img/bg-img/login.jpg';
+        return view('pages.auth.login', compact('title', 'small_banner_background'));
+    }
 }

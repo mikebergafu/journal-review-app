@@ -5,12 +5,16 @@
                 <!-- Section Heading -->
                 <div class="section-heading">
                     <h2>ABOUT US</h2>
-                    <p>We are leading in the plants service fields.</p>
+                    <p>We are leading in plant research.</p>
                 </div>
-                <p>Quisque orci quam, vulputate non commodo finibus, molestie ac ante. Duis in sceleri quesem. Nulla sit amet varius nunc. Maecenas dui, tempeu ullam corper in.</p>
+                <p>
+                    @php
+                    echo $about->about_text
+                    @endphp
+                </p>
 
                 <!-- Progress Bar Content Area -->
-                <div class="alazea-progress-bar mb-50">
+                {{--<div class="alazea-progress-bar mb-50">
                     <!-- Single Progress Bar -->
                     <div class="single_progress_bar">
                         <p>Office plants</p>
@@ -54,7 +58,7 @@
                             <span class="fill" data-percentage="65"></span>
                         </div>
                     </div>
-                </div>
+                </div>--}}
             </div>
 
             <div class="col-12 col-lg-6">
