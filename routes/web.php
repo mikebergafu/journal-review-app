@@ -22,7 +22,6 @@ Route::group(['namespace' => 'Researcher'], function () {
     Route::get('/', 'AuthController@welcome')->name('welcome');
     //Prefix {ppsg-member}
     Route::group(['prefix' => 'ppsg-member'], function () {
-
         Route::group(['middleware' => 'verified'], function () {
             //Waiting for routes
             Route::get('/home', 'HomeController@index')->name('home');
@@ -33,10 +32,9 @@ Route::group(['namespace' => 'Researcher'], function () {
             Route::get('/articles/papers', 'ArticleController@index')->name('articles');
             Route::get('/articles/papers/{slug}', 'ArticleController@indexByEdition')->name('articles.by.articles');
 
-            Route::post('/contacts-us', 'NotificationController@store')->name('contact.us');
             Route::get('/subscribe', 'NotificationController@subscribe')->name('subscribe');
         });
-
+        Route::post('/contacts-us', 'NotificationController@store')->name('contact.us');
     });
 
 });
@@ -60,7 +58,6 @@ Route::group(['namespace' => 'Admin'], function () {
 
                 Route::get('/edit-abouts', 'WebSiteSettingsController@editAboutText')->name('about.edit');
                 Route::post('/update-abouts', 'WebSiteSettingsController@updateAboutText')->name('about.update');
-
 
                 Route::get('/add-what-we-do', 'WebSiteSettingsController@createWWDText')->name('wwd.add');
                 Route::post('/store-what-we-do', 'WebSiteSettingsController@storeWWDText')->name('wwd.store');
