@@ -8,6 +8,7 @@ use App\Http\Requests\ContactUsReq;
 use App\Http\Requests\SubscribeReq;
 use App\Notifications\SubscribeUser;
 use App\Subscription;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -48,12 +49,14 @@ class NotificationController extends Controller
         $contact->subject = $request->subject;
         $contact->message = $request->message;
 
+        $toUser = User::find(1);
+
         $saved = $contact->save();
         if(!$saved){
             toastr()->error('Sorry! an error has occurred');
             return redirect()->back();
         }
-        Auth::user()->notify(new SubscribeUser($contact));
+        $toUser->notify(new SubscribeUser($contact));
         toastr()->success('Message successfully sent');
         return redirect()->back();
     }
