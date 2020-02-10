@@ -13,7 +13,7 @@ class AlterEditionsTable extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
+        Schema::table('editions', function (Blueprint $table) {
             $table->string('slug',300)->unique();
         });
     }
