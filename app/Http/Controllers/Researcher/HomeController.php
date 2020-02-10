@@ -15,6 +15,7 @@
         public function index()
         {
             $about = About::where('active', true)->first();
+
             return view('pages.home', compact('about'));
         }
 

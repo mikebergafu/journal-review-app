@@ -16,7 +16,7 @@ class WebSiteSettingsController extends Controller
     use WhatWeDoTrait;
     public function dashboard()
     {
-        $title = 'Admin Dashboard';
+        $title = 'Website Settings Dashboard';
         $about = About::where('active', true)->first();
         $banners = BannerSlider::where([
             ['active', true],
@@ -24,7 +24,7 @@ class WebSiteSettingsController extends Controller
             ['end_date', '<=', Carbon::today()->toDateString()],
         ])->get();
 
-        return view('pages.admin.dashboard.index', compact('title', 'banners','about'));
+        return view('pages.admin.settings.index', compact('title', 'banners','about'));
     }
 
     public function create_banner_slider()

@@ -31,6 +31,8 @@
             color: red !important;
         }
     </style>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 
     <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>

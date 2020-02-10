@@ -29,6 +29,12 @@ Route::group(['namespace' => 'Researcher'], function () {
             Route::get('/profile', 'HomeController@profile')->name('profile');
             Route::get('/momo', 'HomeController@momo')->name('momo');
             Route::get('/payments', 'HomeController@getPayments')->name('payments');
+
+            Route::get('/articles/papers', 'ArticleController@index')->name('articles');
+            Route::get('/articles/papers/{slug}', 'ArticleController@indexByEdition')->name('articles.by.articles');
+
+            Route::post('/contacts-us', 'NotificationController@store')->name('contact.us');
+            Route::get('/subscribe', 'NotificationController@subscribe')->name('subscribe');
         });
 
     });

@@ -7,9 +7,9 @@
                     <h2>ABOUT US</h2>
                     <p>We are leading in plant research.</p>
                 </div>
-                <p>
+                <p id="about-box" class="limtiCharClass" >
                     @php
-                    echo $about->about_text
+                    \App\Helpers\BergyHelper::strWordCut($about->about_text, 30);
                     @endphp
                 </p>
 

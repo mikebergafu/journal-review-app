@@ -11,10 +11,10 @@
                         <!-- Post Content -->
                         <div class="hero-slides-content text-center">
                             <h2>Plants exist in the weather and light rays that surround them</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ante nec ipsum iaculis, ac iaculis ipsum porttitor. Vivamus cursus nisl lectus, id mattis nisl lobortis eu. Duis diam augue, dapibus ut dolor at, mattis maximus dolor.</p>
+                            <p>Ongoing research efforts to develop disease-resistant plant varieties, to study insect pest behavior, and to understand the emergence of herbicide-resistant weeds contribute to the protection of our crop and ornamental production systems from potentially devastating epidemics and infestations...</p>
                             <div class="welcome-btn-group">
                                 <a href="#" class="btn alazea-btn mr-30">GET STARTED</a>
-                                <a href="#" class="btn alazea-btn active">CONTACT US</a>
+                                <a href="#"  id="btnPageAbout" onclick="return false;" class="btn alazea-btn active">CONTACT US</a>
                             </div>
                         </div>
                     </div>
@@ -32,10 +32,10 @@
                         <!-- Post Content -->
                         <div class="hero-slides-content text-center">
                             <h2>Plants exist in the weather and light rays that surround them</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ante nec ipsum iaculis, ac iaculis ipsum porttitor. Vivamus cursus nisl lectus, id mattis nisl lobortis eu. Duis diam augue, dapibus ut dolor at, mattis maximus dolor.</p>
+                            <p>Plant pathologists study fungi, bacteria, viruses, nematodes, and other microbes that cause diseases of plants. Research focuses on understanding how hosts, pathogens, and environments interact to cause plant diseases and how to control plant diseases...</p>
                             <div class="welcome-btn-group">
                                 <a href="#" class="btn alazea-btn mr-30">GET STARTED</a>
-                                <a href="#" class="btn alazea-btn active">CONTACT US</a>
+                                <a href="#"  id="btnPageAbout" onclick="return false;" class="btn alazea-btn active">CONTACT US</a>
                             </div>
                         </div>
                     </div>

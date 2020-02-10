@@ -12,7 +12,7 @@
 <!-- ##### Header Area End ##### -->
 
 @yield('content')
-
+@include('modals.submit-prompt-modal')
 <!-- ##### Footer Area Start ##### -->
 @include('partials.footer')
 <!-- ##### Footer Area End ##### -->
@@ -20,6 +20,7 @@
 <!-- ##### All Javascript Files ##### -->
 <!-- jQuery-2.2.4 js -->
 @include('common.scripts-master')
+@toastr_render
 </body>
 
 </html>

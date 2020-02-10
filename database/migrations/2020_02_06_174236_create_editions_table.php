@@ -13,7 +13,7 @@ class CreateEditionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('editions', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name',20);
             $table->integer('value')->unsigned();
@@ -29,6 +29,6 @@ class CreateEditionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('editions');
+        Schema::dropIfExists('articles');
     }
 }

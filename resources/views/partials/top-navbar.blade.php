@@ -5,10 +5,10 @@
                 <div class="top-header-content d-flex align-items-center justify-content-between">
                     <!-- Top Header Content -->
                     <div class="top-header-meta">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="ppsg@gmail.com"><i
                                 class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: ppsg@gmail.com</span></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i
-                                class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +1 234 122 122</span></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="+233 (0) 243 621 282"><i
+                                class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +233 (0) 243 621 282</span></a>
                     </div>
 
                     <!-- Top Header Content -->
@@ -49,10 +49,8 @@
                     @endif
                     <!-- Cart -->
                         <div class="cart">
-                            <a href="#"><i class="fa fa-book" aria-hidden="true"></i> <span>Submit Paper</span></a>
+                            <a href="#" data-toggle="modal" data-target="#submitPaperPrompt" ><i class="fa fa-book" aria-hidden="true"></i> <span>Submit Paper</span></a>
                         </div>
-
-
                     </div>
                 </div>
             </div>

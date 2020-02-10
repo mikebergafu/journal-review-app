@@ -76,5 +76,7 @@
             @yield('content')
         </main>
     </div>
+
+    @toastr_render
 </body>
 </html>

@@ -20,7 +20,31 @@
 <!-- optionally if you need translation for your language then include  locale file as mentioned below -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.8/js/locales/(lang).js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 @include('scripts.modal-form-validation-js')
 
+<script>
+    $(document).ready(function (){
+        $("#btnAbout").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#about-box").offset().top
+            }, 2000);
+        });
+
+        $("#btnContactUs").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#contact-box").offset().top
+            }, 2000);
+        });
+
+        $("#btnPageAbout").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#contact-box").offset().top
+            }, 2000);
+        });
+    });
+</script>
+
 @include('alerts.alerts')
-@yield('scripts')
+{{--@yield('scripts')--}}

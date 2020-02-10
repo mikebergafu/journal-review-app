@@ -117,7 +117,7 @@
         {
             $url = 'https://sandbox.momodeveloper.mtn.com/collection/token/';
             $apiUser = '4f748d0b-3840-4f81-bd20-1175400322a6';
-            $apiKey = '4ddf4ad4dfc24a9fa1ee75ee1c436eb3';
+            $apiKey = '561f3e0da0554555bf455eeb958319d4';
             $subKey = 'ed4079b28afd48c99a033a7e0bb9be46';
             $cred = $apiUser.':'.$apiKey;
 
@@ -157,4 +157,21 @@
             } catch (\Exception $e) {
             }
         }
+
+
+        public static function strWordCut($string, $length, $end = '...')
+        {
+            $string = strip_tags($string);
+
+            if (strlen($string) > $length) {
+
+                // truncate string
+                $stringCut = substr($string, 0, $length);
+
+                // make sure it ends in a word so assassinate doesn't become ass...
+                $string = substr($stringCut, 0, strrpos($stringCut, ' ')) . $end;
+            }
+            echo $string;
+        }
+
     }

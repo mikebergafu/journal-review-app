@@ -20,7 +20,12 @@
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        <span class="navbarToggler"><span>
+
+                            </span><span>
+
+                            </span><span>
+                            </span></span>
                     </div>
 
                     <!-- Menu -->
@@ -35,19 +40,21 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="{{route('home')}}">Home</a></li>
-                                <li><a href="shop.html">Editions</a>
+                                <li><a href="#" onclick="return false;">Editions</a>
                                     <ul class="dropdown">
                                         @foreach(\App\Helpers\BergyHelper::getEditions() as $edition)
-                                            <li><a href="shop.html">{{\App\Helpers\BergyHelper::ordinal($edition->value)}} Edition</a></li>
+                                            <li><a href="{{route('articles.by.articles',$edition->slug)}}">{{\App\Helpers\BergyHelper::ordinal($edition->value)}} Edition</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="portfolio.html">Articles</a></li>
-                                <li><a href="shop.html">Do More</a>
+                                @if(\Request::is('/') || \Route::current()->getName() == 'home')
+                                <li><a href="#"  id="btnAbout" onclick="return false;" >About</a></li>
+                                @endif
+                                <li><a href="{{route('articles')}}">Articles</a></li>
+                                <li><a href="#" onclick="return false;"  >Do More</a>
                                     <ul class="dropdown">
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="portfolio.html">Events</a></li>
+                                        <li><a href="#" onclick="return false;" id="btnContactUs" >Contact Us</a></li>
+                                        <li><a href="#" onclick="return false;">Events</a></li>
                                     </ul>
                                 </li>
                             </ul>

@@ -8,7 +8,7 @@
     <!-- ##### Hero Area End ##### -->
 
     <!-- ##### Service Area Start ##### -->
-    @include('grids.what-we-do')
+    {{--@include('grids.what-we-do')--}}
     <!-- ##### Service Area End ##### -->
 
     <!-- ##### About Area Start ##### -->
@@ -16,7 +16,7 @@
     <!-- ##### About Area End ##### -->
 
     <!-- ##### Portfolio Area Start ##### -->
-    @include('grids.articles')
+
     <!-- ##### Portfolio Area End ##### -->
 
     <!-- ##### Testimonial Area Start ##### -->
@@ -32,7 +32,7 @@
     <!-- ##### Blog Area End ##### -->
 
     <!-- ##### Subscribe Area Start ##### -->
-
+    @include('grids.subscribe-grid')
     <!-- ##### Subscribe Area End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
